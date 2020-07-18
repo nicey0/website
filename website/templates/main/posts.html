@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block header %}posts{% endblock header %}
+
+{% block body %}
+<main>
+    {% if g.nicey %}
+    <section class="add-post">
+        <h2>new post</h2>
+        <form method="post">
+            <label for="title">title</label>
+            <input id="title" type="text" name="title" required>
+            <label for="body">body</label>
+            <textarea id="body" name="body" cols=30 rows=10 required></textarea>
+            <button>post</button>
+        </form>
+    </section>
+    {% endif %}
+    <section class="posts">
+        {% for post in posts %}
+        <h2>
+            {{ post["dt"].date() }}
+        </h2>
+        <article>
+            <h2>{{ post["title"] }}</h2>
+            <p>{{ post["body"] }}</p>
+        </article>
+        <br>
+        {% endfor %}
+    </section>
+</main>
+{% endblock body %}

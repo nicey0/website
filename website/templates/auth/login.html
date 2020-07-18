@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block header %}login page{% endblock header %}
+
+{% block body %}
+<main>
+    {% for message in get_flashed_messages() %}
+        <section class="flash">{{ message }}</section>
+    {% endfor %}
+    <section class="login">
+        <form method="post">
+            <label for="p">password</label>
+            <input type="password" name="password" id="p" required>
+            <button>submit</button>
+        </form>
+    </section>
+</main>
+{% endblock body %}

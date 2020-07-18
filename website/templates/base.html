@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>nicey's website</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Mono">
+    <link rel="stylesheet" href="{{ url_for('static', filename='base.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    {% block links %}{% endblock links %}
+</head>
+<body>
+    <header>
+        <nav>
+            <header>
+                <h1>nicey's {% block header %}{% endblock header %}</h1>
+            </header>
+            <ul>
+                <li><a href="{{ url_for('main.posts') }}">posts</a></li>
+                <li><a href="{{ url_for('main.projects') }}">projects</a></li>
+                <li><a href="{{ url_for('main.about') }}">about</a></li>
+                {% if not g.nicey %}
+                    <li><a href="{{ url_for('auth.login') }}">login</a></li>
+                {% else %}
+                    <li><a href="{{ url_for('auth.logout') }}">logout</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+    </header>
+    {% block body %}{% endblock body %}
+</body>
+{% block scripts %}{% endblock scripts %}
+</html>
