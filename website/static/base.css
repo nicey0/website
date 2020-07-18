@@ -39,8 +39,13 @@ nav header {
     background-color: #444444;
 }
 
+nav header img {
+    max-width: 3.6rem;
+    margin-left: 1rem;
+}
+
 nav header h1 {
-    margin-left: var(--head-left);
+    margin-left: 1.5rem;
 }
 
 nav ul {
