@@ -1,3 +1,8 @@
+:root {
+    --main: #1b1b1c;
+    --nav: #d6d8d8;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -7,40 +12,35 @@
 
 html, body {
     padding-bottom: 1rem;
-    background-color: #333333;
+    background-color: var(--main);
 }
 
 /* NAVBAR */
 
-header > nav {
-    display: grid;
-    grid-template-rows: 5rem 4rem;
-    grid-template-columns: auto;
-    align-items: center;
-    justify-items: stretch;
-    padding: 0 1.5rem;
+nav {
+    padding: 1.2rem 0;
+    border-bottom: 1px solid var(--nav);
 }
 
-header > nav ul {
+nav ul {
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
     height: 100%;
     width: 100%;
-    background-color: #444444;
 }
 
-header > nav li {
-    margin-right: 1rem;
+nav li {
+    margin-left: 1rem;
     display: inline;
 }
 
-header > nav li.right {
-    margin-right: 0;
+nav li.right {
     margin-left: auto;
+    margin-right: 1rem;
 }
 
 .flash {
-    background-color: #551111;
     padding: 1rem;
+    background-color: #551111;
 }
