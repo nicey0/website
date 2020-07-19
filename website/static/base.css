@@ -1,13 +1,43 @@
 * {
     margin: 0;
+    padding: 0;
     color: white;
     font-family: 'Fira Mono', monospace;
 }
 
 html, body {
-    margin: 0;
     padding-bottom: 1rem;
     background-color: #333333;
+}
+
+/* NAVBAR */
+
+header > nav {
+    display: grid;
+    grid-template-rows: 5rem 4rem;
+    grid-template-columns: auto;
+    align-items: center;
+    justify-items: stretch;
+    padding: 0 1.5rem;
+}
+
+header > nav ul {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-color: #444444;
+}
+
+header > nav li {
+    margin-right: 1rem;
+    display: inline;
+}
+
+header > nav li.right {
+    margin-right: 0;
+    margin-left: auto;
 }
 
 .flash {
