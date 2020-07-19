@@ -9,6 +9,11 @@
     {% block links %}{% endblock links %}
 </head>
 <body>
+    <section class="flashed">
+        {% for message in get_flashed_messages() %}
+            <section class="flash">{{ message }}</section>
+        {% endfor %}
+    </section>
     <!--<a id="right" href="https://github.com/nicey0">-->
     <!--<img src="{{ url_for('static', filename='github.png') }}" alt="<github link>">-->
     <!--</a>-->

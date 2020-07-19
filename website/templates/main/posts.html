@@ -23,10 +23,12 @@
                 {% endfor %}
             </p>
             <section>
-                <form class="delete" action="delete" method="post">
-                    <input name="pid" type="hidden" value="{{ post["pid"] }}">
-                    <button>[del]</button>
-                </form>
+                {% if g.nicey %}
+                    <form class="delete" action="delete" method="post">
+                        <input name="pid" type="hidden" value="{{ post["pid"] }}">
+                        <button>[del]</button>
+                    </form>
+                {% endif %}
                 <div>{{ post["dt"].date() }}</div>
             </section>
         </article>
