@@ -16,11 +16,21 @@ html, body {
     background-color: var(--main);
 }
 
-/* NAVBAR */
+/* HEADER */
+header {
+    margin-left: 2rem;
+}
+header h1 {
+    font-size: 3rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.3rem;
+}
 
+/* NAVBAR */
 nav {
+    max-width: 40rem;
     padding: 1.2rem 0;
-    border-bottom: 1px solid var(--white);
+    border-top: 1px solid var(--white);
 }
 
 nav ul {
@@ -44,18 +54,6 @@ nav li.right {
 /* MAIN */
 main {
     margin: 0 2rem;
-}
-
-main h1 {
-    font-size: 3rem;
-    margin-top: 1.5rem;
-    margin-bottom: 0.3rem;
-}
-
-main div.separator {
-    height: 1px;
-    max-width: 35rem;
-    background-color: var(--white);
 }
 
 /* NEW POST */
