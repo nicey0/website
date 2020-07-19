@@ -5,7 +5,8 @@
 {% block body %}
 <main>
     {% if g.nicey %}
-    <form method="post">
+    <form class='new-post' method="post">
+        <h2>new post</h2>
         <label for="title">title</label>
         <input id="title" type="text" name="title" required>
         <label for="body">body</label>
@@ -15,19 +16,17 @@
     {% endif %}
     <section class="posts">
         {% for post in posts %}
-        <section class="post">
-            <article>
-                <h2>{{ post["title"] }}</h2>
-                <p>
-                    {% for line in post["body"].split('BREAKLINE') %}
-                        {{ line }}<br>
-                    {% endfor %}
-                </p>
-            </article>
+        <article class="post">
+            <h2>{{ post["title"] }}</h2>
             <div>
                 {{ post["dt"].date() }}
             </div>
-        </section>
+            <p>
+                {% for line in post["body"].split('BREAKLINE') %}
+                    {{ line }}<br>
+                {% endfor %}
+            </p>
+        </article><br>
         {% endfor %}
     </section>
 </main>

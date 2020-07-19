@@ -1,6 +1,6 @@
 :root {
     --main: #1b1b1c;
-    --nav: #d6d8d8;
+    --white: #d6d8d8;
 }
 
 * {
@@ -19,7 +19,7 @@ html, body {
 
 nav {
     padding: 1.2rem 0;
-    border-bottom: 1px solid var(--nav);
+    border-bottom: 1px solid var(--white);
 }
 
 nav ul {
@@ -38,6 +38,56 @@ nav li {
 nav li.right {
     margin-left: auto;
     margin-right: 1rem;
+}
+
+/* MAIN */
+main {
+    margin: 0 2rem;
+}
+
+/* NEW POST */
+.new-post {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    padding: 1rem;
+    border-left: 1px solid var(--white);
+    border-right: 1px solid var(--white);
+    border-bottom: 1px solid var(--white);
+}
+
+.new-post label {
+    margin-top: 1rem;
+    margin-bottom: 0.25rem;
+}
+
+.new-post textarea {
+    resize: vertical;
+}
+
+.new-post button {
+    margin-top: 1rem;
+}
+
+.new-post input, .new-post textarea, .new-post button {
+    padding: 0.5rem;
+    border: 0;
+    background-color: #2a2a2a;
+}
+
+/* POSTS */
+.post {
+    border: 1px solid var(--white);
+    padding: 1rem;
+    margin: 1.5rem 0 0 0;
+    display: inline-block;
+    min-width: 30rem;
+    max-width: 80rem;
+}
+
+.post div {
+    margin-bottom: 1rem;
+    color: #888888;
 }
 
 .flash {
