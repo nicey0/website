@@ -9,7 +9,6 @@
     {% block links %}{% endblock links %}
 </head>
 <body>
-    <!--<img id="logo" src="{{ url_for('static', filename='nicey.png') }}" alt="<nicey>">-->
     <!--<a id="right" href="https://github.com/nicey0">-->
     <!--<img src="{{ url_for('static', filename='github.png') }}" alt="<github link>">-->
     <!--</a>-->
@@ -17,7 +16,10 @@
     <!--<img src="{{ url_for('static', filename='nxfury.png') }}" alt="<nxfury invite>">-->
     <!--</a>-->
     <header>
-        <h1>nicey's {% block header %}{% endblock header %}</h1>
+        <header>
+            <img id="logo" src="{{ url_for('static', filename='nicey.png') }}" alt="<nicey>">
+            <h1>nicey's {% block header %}{% endblock header %}</h1>
+        </header>
         <nav>
             <ul>
                 <li><a href="{{ url_for('main.posts') }}">posts</a></li>

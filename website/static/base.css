@@ -17,14 +17,39 @@ html, body {
     background-color: var(--main);
 }
 
+h2 {
+    font-size: 1.75rem;
+}
+
+p {
+    max-width: 60rem;
+    font-size: 1.35rem;
+}
+
 /* HEADER */
-header {
+body > header {
     margin-left: 2rem;
 }
-header h1 {
+
+header > header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 1.5rem;
+    padding-bottom: 0.3rem;
+}
+
+header > header img {
+    max-height: 3.6rem;
+    margin-left: 0.25rem;
+    margin-right: 1rem;
+}
+
+body > header h1 {
+    display: inline;
     font-size: 3rem;
-    margin-top: 1.5rem;
-    margin-bottom: 0.3rem;
+    /*margin-top: 1.5rem;*/
+    /*margin-bottom: 0.3rem;*/
 }
 
 /* NAVBAR */
@@ -103,4 +128,11 @@ main {
 .flash {
     padding: 1rem;
     background-color: #551111;
+}
+
+/* STATIC TEXT */
+.st p {
+    margin-left: 2rem;
+    margin-top: 0.25rem;
+    margin-bottom: 1rem;
 }
