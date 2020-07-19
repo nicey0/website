@@ -3,7 +3,6 @@
 {% block header %}login page{% endblock header %}
 
 {% block body %}
-<main>
     {% for message in get_flashed_messages() %}
         <section class="flash">{{ message }}</section>
     {% endfor %}
@@ -14,5 +13,4 @@
             <button>submit</button>
         </form>
     </section>
-</main>
 {% endblock body %}
