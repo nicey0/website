@@ -3,9 +3,6 @@ from .db import get_db
 
 bp = Blueprint('main', __name__)
 
-def gen(l: int=64) -> str:
-    return "aaaaa "*int(l/5)
-
 @bp.route('/')
 @bp.route('/posts', methods=('GET', 'POST'))
 def posts():
