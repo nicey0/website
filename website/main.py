@@ -28,12 +28,25 @@ def delete():
 
 @bp.route('/projects')
 def projects():
-    return render_template('main/projects.html')
+    p = []
+    with open('website/data/projects.txt') as f:
+        for section in f.read().split("---"):
+            top, description = section.strip().split('\n')
+            github, name = top.split('::')
+            p.append({"github": github, "name": name, "description": description})
+    return render_template('main/projects.html', p=p)
 
 @bp.route('/about')
 def about():
-    return render_template('main/about.html')
+    abouts = []
+    with open('website/data/about.txt') as f:
+        for section in f.read().split("---"):
+            q, a = section.strip().split('\n')
+            abouts.append({"q": q, "a": a})
+    return render_template('main/about.html', abouts=abouts)
 
 @bp.route('/contact')
 def contact():
-    return render_template('main/contact.html')
+    with open('website/data/contact.txt') as f:
+        contacts = f.read().strip().split('\n')
+    return render_template('main/contact.html', contacts=contacts)

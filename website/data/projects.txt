@@ -1,0 +1,23 @@
+website::this website
+little website i made for no reason
+---
+conwaysgameoflife::conwaysgameoflife
+conway's game of life implementation made in python+pillow
+---
+simple-vi-clone::simple-vi-clone
+simple vi clone made in python+ncurses
+---
+spiderbook::spiderbook
+shitty website "made" in flask (pg18+)
+---
+spiderbook2::spiderbook2
+shitty website "made" in flask (pg16+)
+---
+tui-snake::tui-snake
+snake clone made in python+ncurses
+---
+tui-tetris::tui-tetris
+tetris clone made in python+ncurses [unfinished]
+---
+wireworld::wireworld
+wireworld implementation in made python+pillow
