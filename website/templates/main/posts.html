@@ -17,15 +17,17 @@
         {% for post in posts %}
         <article class="post">
             <h2>{{ post["title"] }}</h2>
-            <div>
-                {{ post["dt"].date() }}
-            </div>
             <p>
                 {% for line in post["body"].split('BREAKLINE') %}
                     {{ line }}<br>
                 {% endfor %}
             </p>
-        </article><br>
+            <section>
+                <form class="delete" method="post"><button>[del]</button></form>
+                <div>{{ post["dt"].date() }}</div>
+            </section>
+        </article>
+        <br>
         {% endfor %}
     </section>
 {% endblock body %}

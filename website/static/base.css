@@ -26,6 +26,10 @@ p {
     font-size: 1.35rem;
 }
 
+button {
+    cursor: pointer;
+}
+
 /* HEADER */
 body > header {
     margin-left: 2rem;
@@ -89,6 +93,7 @@ main {
     width: 30%;
     padding: 1rem;
     border: 1px solid var(--white);
+    margin-bottom: 3rem;
 }
 
 .new-post label {
@@ -113,18 +118,46 @@ main {
 /* POSTS */
 .post {
     border: 1px solid var(--white);
-    padding: 1rem;
     margin: 0 0 1.5rem 0;
-    display: inline-block;
+    display: inline-flex;
+    flex-direction: column;
     min-width: 30rem;
     max-width: 80rem;
 }
 
-.post div {
-    margin-bottom: 1rem;
-    color: #888888;
+.post h2 {
+    border: 1px solid var(--white);
+    border-top: 0;
+    padding: 0.4rem 0.75rem;
+    margin: 0 1rem;
+    margin-bottom: 0.75rem;
+    word-break: break-word;
 }
 
+.post p {
+    margin: 0 1rem;
+    word-break: break-word;
+    max-width: 77rem;
+}
+.post section {
+    margin: 1rem 0 0.25rem 0;
+    padding: 0 0.5rem;
+    display: flex;
+    width: 100%;
+}
+
+.post section div {
+    color: #888888;
+    margin-left: auto;
+}
+
+.delete button {
+    color: #fc2d2d;
+    border: 0;
+    background-color: var(--main);
+}
+
+/* FLASH */
 .flash {
     padding: 1rem;
     background-color: #551111;
