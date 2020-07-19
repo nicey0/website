@@ -23,7 +23,10 @@
                 {% endfor %}
             </p>
             <section>
-                <form class="delete" method="post"><button>[del]</button></form>
+                <form class="delete" action="delete" method="post">
+                    <input name="pid" type="hidden" value="{{ post["pid"] }}">
+                    <button>[del]</button>
+                </form>
                 <div>{{ post["dt"].date() }}</div>
             </section>
         </article>
