@@ -31,9 +31,6 @@ def projects():
     p = []
     with open('website/data/projects.txt') as f:
         for section in f.read().split("---"):
-            print("-"*100)
-            print(section.strip().split('\n'))
-            print("-"*100)
             top, description = section.strip().split('\n')
             github, name = top.split('::')
             p.append({"github": github, "name": name, "description": description})
@@ -41,12 +38,15 @@ def projects():
 
 @bp.route('/about')
 def about():
+    abouts = []
     with open('website/data/about.txt') as f:
-        print(f.read())
-    return render_template('main/about.html')
+        for section in f.read().split("---"):
+            q, a = section.strip().split('\n')
+            abouts.append({"q": q, "a": a})
+    return render_template('main/about.html', abouts=abouts)
 
 @bp.route('/contact')
 def contact():
     with open('website/data/contact.txt') as f:
-        print(f.read())
-    return render_template('main/contact.html')
+        contacts = f.read().strip().split('\n')
+    return render_template('main/contact.html', contacts=contacts)

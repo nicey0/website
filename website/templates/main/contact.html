@@ -3,10 +3,9 @@
 {% block header %}contact page{% endblock header %}
 
 {% block body %}
-    <section class="st">
-        <h2>discord: nicey#6176</h2>
-    </section>
-    <section class="st">
-        <h2>email: nicey@protonmail.ch</h2>
-    </section>
+    {% for c in contacts %}
+        <section class="st">
+            <h2>{{ c }}</h2>
+        </section>
+    {% endfor %}
 {% endblock body %}
