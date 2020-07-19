@@ -53,7 +53,7 @@ nav li.right {
 
 /* MAIN */
 main {
-    margin: 0 2rem;
+    margin: 0 4rem;
 }
 
 /* NEW POST */
@@ -88,7 +88,7 @@ main {
 .post {
     border: 1px solid var(--white);
     padding: 1rem;
-    margin: 1.5rem 0 0 0;
+    margin: 0 0 1.5rem 0;
     display: inline-block;
     min-width: 30rem;
     max-width: 80rem;

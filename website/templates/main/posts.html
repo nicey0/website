@@ -3,29 +3,29 @@
 {% block header %}posts{% endblock header %}
 
 {% block body %}
-{% if g.nicey %}
-<form class='new-post' method="post">
-    <h2>new post</h2>
-    <label for="title">title</label>
-    <input id="title" type="text" name="title" required>
-    <label for="body">body</label>
-    <textarea id="body" name="body" cols=30 rows=10 required></textarea>
-    <button>post</button>
-</form>
-{% endif %}
-<section class="posts">
-    {% for post in posts %}
-    <article class="post">
-        <h2>{{ post["title"] }}</h2>
-        <div>
-            {{ post["dt"].date() }}
-        </div>
-        <p>
-            {% for line in post["body"].split('BREAKLINE') %}
-                {{ line }}<br>
-            {% endfor %}
-        </p>
-    </article><br>
-    {% endfor %}
-</section>
+    {% if g.nicey %}
+    <form class='new-post' method="post">
+        <h2>new post</h2>
+        <label for="title">title</label>
+        <input id="title" type="text" name="title" required>
+        <label for="body">body</label>
+        <textarea id="body" name="body" cols=30 rows=10 required></textarea>
+        <button>post</button>
+    </form>
+    {% endif %}
+    <section class="posts">
+        {% for post in posts %}
+        <article class="post">
+            <h2>{{ post["title"] }}</h2>
+            <div>
+                {{ post["dt"].date() }}
+            </div>
+            <p>
+                {% for line in post["body"].split('BREAKLINE') %}
+                    {{ line }}<br>
+                {% endfor %}
+            </p>
+        </article><br>
+        {% endfor %}
+    </section>
 {% endblock body %}
