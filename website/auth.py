@@ -20,7 +20,7 @@ def login():
             session.clear()
             session['nicey'] = True
             return redirect(url_for('index'))
-        flash("Incorrect password")
+        flash("incorrect password")
     return render_template('auth/login.html')
 
 @bp.route('/logout')
