@@ -18,7 +18,7 @@ html, body {
 nav {
     display: grid;
     grid-template-columns: 1rem auto;
-    grid-template-rows: 4rem 3rem;
+    grid-template-rows: 4.5rem 3rem;
     align-items: center;
     /*justify-content: stretch;*/
     grid-template-areas:
@@ -39,9 +39,30 @@ nav header {
     background-color: #444444;
 }
 
-nav header img {
-    max-width: 3.6rem;
+nav header #logo {
+    max-height: 3.6rem;
     margin-left: 1rem;
+}
+
+nav header #right {
+    margin-left: auto;
+    margin-right: 1rem;
+    display: inline-flex;
+}
+
+nav header #right img {
+    vertical-align: center;
+    max-height: 2.8rem;
+}
+
+nav header #nxfury {
+    margin-right: 1rem;
+    display: inline-flex;
+}
+
+nav header #nxfury img {
+    vertical-align: center;
+    max-height: 3rem;
 }
 
 nav header h1 {
@@ -67,8 +88,13 @@ nav ul li {
     margin-left: var(--head-left);
 }
 
+nav ul li.right {
+    margin-left: auto;
+    margin-right: var(--head-left);
+}
+
 main {
-    padding: 0 0.5rem;
+    padding: 0 1.5rem;
 }
 
 main section h2 {
@@ -106,10 +132,6 @@ main .login {
     margin: 1rem 0 0 1rem;
 }
 
-main .add-post {
-    margin-left: 1rem;
-}
-
 main .add-post h2 {
     margin-bottom: 0.25rem;
 }
@@ -124,23 +146,26 @@ article {
     display: inline-block;
 }
 
-.posts h2 {
-    font-size: 1.25rem;
-    margin: 2rem 0 0.25rem 1rem;
+.posts article {
+    margin: 0;
+    margin-top: 2rem;
+    min-width: 25rem;
+    min-height: 10rem;
 }
 
 .posts article h2 {
     margin: 0;
     margin-bottom: 0.5rem;
-}
-
-.posts article {
-    margin: 0;
-    margin-left: 1rem;
+    font-size: 1.8rem;
 }
 
 .posts article p {
     margin: 0;
+}
+
+.posts div {
+    margin: 0.4rem 0 0 0;
+    color: #aaaaaa;
 }
 
 .smol {

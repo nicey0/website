@@ -1,12 +1,15 @@
 import os
 from flask import Flask
 
-
 app = Flask(__name__)
-app.config.from_mapping(
-    SECRET_KEY="dev",
-    DATABASE=os.path.join(app.instance_path, 'website.sqlite')
-)
+
+class Production:
+    SECRET_KEY = os.urandom(32)
+    DATABASE = os.path.join(app.instance_path, 'website.sqlite')
+class Development:
+    SECRET_KEY = "dev"
+    DATABASE = os.path.join(app.instance_path, 'dev.sqlite')
+app.config.from_object(Production())
 
 try:
     os.makedirs(app.instance_path)

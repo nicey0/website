@@ -19,11 +19,14 @@ def posts():
     posts = db.execute("SELECT dt, title, body FROM posts ORDER BY dt DESC").fetchall()
     return render_template('main/posts.html', posts=posts)
 
+@bp.route('/projects')
+def projects():
+    return render_template('main/projects.html')
+
 @bp.route('/about')
 def about():
     return render_template('main/about.html')
 
-
-@bp.route('/projects')
-def projects():
-    return render_template('main/projects.html')
+@bp.route('/contact')
+def contact():
+    return render_template('main/contact.html')

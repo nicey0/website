@@ -12,17 +12,24 @@
     <header>
         <nav>
             <header>
-                <img src="{{ url_for('static', filename='nicey.png') }}" alt="<nicey>">
+                <img id="logo" src="{{ url_for('static', filename='nicey.png') }}" alt="<nicey>">
                 <h1>nicey's {% block header %}{% endblock header %}</h1>
+                <a id="right" href="https://github.com/nicey0">
+                    <img src="{{ url_for('static', filename='github.png') }}" alt="<github link>">
+                </a>
+                <a id="nxfury" href="https://discord.gg/yEmqfBc">
+                    <img src="{{ url_for('static', filename='nxfury.png') }}" alt="<nxfury invite>">
+                </a>
             </header>
             <ul>
                 <li><a href="{{ url_for('main.posts') }}">posts</a></li>
                 <li><a href="{{ url_for('main.projects') }}">projects</a></li>
                 <li><a href="{{ url_for('main.about') }}">about</a></li>
+                <li><a href="{{ url_for('main.contact') }}">contact</a></li>
                 {% if not g.nicey %}
-                    <li><a href="{{ url_for('auth.login') }}">login</a></li>
+                    <li class="right"><a href="{{ url_for('auth.login') }}">login</a></li>
                 {% else %}
-                    <li><a href="{{ url_for('auth.logout') }}">logout</a></li>
+                    <li class="right"><a href="{{ url_for('auth.logout') }}">logout</a></li>
                 {% endif %}
             </ul>
         </nav>
