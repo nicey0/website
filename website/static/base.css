@@ -9,6 +9,7 @@
     padding: 0;
     color: var(--text);
     font-family: 'Fira Mono', monospace;
+    box-sizing: border-box;
 }
 
 html, body {
