@@ -46,15 +46,25 @@ main {
     margin: 0 2rem;
 }
 
+main h1 {
+    font-size: 3rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.3rem;
+}
+
+main div.separator {
+    height: 1px;
+    max-width: 35rem;
+    background-color: var(--white);
+}
+
 /* NEW POST */
 .new-post {
     display: flex;
     flex-direction: column;
     width: 30%;
     padding: 1rem;
-    border-left: 1px solid var(--white);
-    border-right: 1px solid var(--white);
-    border-bottom: 1px solid var(--white);
+    border: 1px solid var(--white);
 }
 
 .new-post label {

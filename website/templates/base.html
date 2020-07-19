@@ -29,7 +29,11 @@
             {% endif %}
         </ul>
     </nav>
-    {% block body %}{% endblock body %}
+    <main>
+        <h1>nicey's {% block header %}{% endblock header %}</h1>
+        <div class="separator"></div>
+        {% block body %}{% endblock body %}
+    </main>
 </body>
 {% block scripts %}{% endblock scripts %}
 </html>
