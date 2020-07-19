@@ -13,4 +13,4 @@ Personal website (properly) made with Flask!
 ## TODO
 [ ] link about page to some file to make it easier to edit
 [ ] link contact page to some file to make it easier to edit
-[ ] link contact page to some file to make it easier to edit
+[ ] link projects page to some file to make it easier to edit

@@ -3,36 +3,38 @@
 {% block header %}projects{% endblock header %}
 
 {% block body %}
-    <section class="st">
-        <h2><a href="https://github.com/nicey0/website">this website</a></h2>
-        <p>little website i made for no real reason</p>
-    </section>
-    <section class="st">
-        <h2><a href="https://github.com/nicey0/conwaysgameoflife">conwaysgameoflife</a></h2>
-        <p>conway's game of life implementation made in python+pillow</p>
-    </section>
-    <section class="st">
-        <h2><a href="https://github.com/nicey0/simple-vi-clone">simple-vi-clone</a></h2>
-        <p>simple vi clone made in python+ncurses</p>
-    </section>
-    <section class="st">
-        <h2><a href="https://github.com/nicey0/spiderbook">spiderbook</a></h2>
-        <p>shitty website "made" in flask (pg18+)</p>
-    </section>
-    <section class="st">
-        <h2><a href="https://github.com/nicey0/spiderbook2">spiderbook2</a></h2>
-        <p>shitty website "made" in flask (pg16+)</p>
-    </section>
-    <section class="st">
-        <h2><a href="https://github.com/nicey0/tui-snake">tui-snake</a></h2>
-        <p>snake clone made in python+ncurses</p>
-    </section>
-    <section class="st">
-        <h2><a href="https://github.com/nicey0/tui-tetris">tui-tetris</a></h2>
-        <p>tetris clone made in python+ncurses [unfinished]</p>
-    </section>
-    <section class="st">
-        <h2><a href="https://github.com/nicey0/wireworld">wireworld</a></h2>
-        <p>wireworld implementation in made python+pillow</p>
-    </section>
+    {% for project in p %}
+        <section class="st">
+            <h2><a href="https://github.com/nicey0/{{ project['github'] }}">{{ project['name'] }}</a></h2>
+            <p>{{ project['description'] }}</p>
+        </section>
+    {% endfor %}
+    <!--<section class="st">-->
+        <!--<h2><a href="https://github.com/nicey0/conwaysgameoflife">conwaysgameoflife</a></h2>-->
+        <!--<p>conway's game of life implementation made in python+pillow</p>-->
+    <!--</section>-->
+    <!--<section class="st">-->
+        <!--<h2><a href="https://github.com/nicey0/simple-vi-clone">simple-vi-clone</a></h2>-->
+        <!--<p>simple vi clone made in python+ncurses</p>-->
+    <!--</section>-->
+    <!--<section class="st">-->
+        <!--<h2><a href="https://github.com/nicey0/spiderbook">spiderbook</a></h2>-->
+        <!--<p>shitty website "made" in flask (pg18+)</p>-->
+    <!--</section>-->
+    <!--<section class="st">-->
+        <!--<h2><a href="https://github.com/nicey0/spiderbook2">spiderbook2</a></h2>-->
+        <!--<p>shitty website "made" in flask (pg16+)</p>-->
+    <!--</section>-->
+    <!--<section class="st">-->
+        <!--<h2><a href="https://github.com/nicey0/tui-snake">tui-snake</a></h2>-->
+        <!--<p>snake clone made in python+ncurses</p>-->
+    <!--</section>-->
+    <!--<section class="st">-->
+        <!--<h2><a href="https://github.com/nicey0/tui-tetris">tui-tetris</a></h2>-->
+        <!--<p>tetris clone made in python+ncurses [unfinished]</p>-->
+    <!--</section>-->
+    <!--<section class="st">-->
+        <!--<h2><a href="https://github.com/nicey0/wireworld">wireworld</a></h2>-->
+        <!--<p>wireworld implementation in made python+pillow</p>-->
+    <!--</section>-->
 {% endblock body %}
