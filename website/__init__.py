@@ -9,7 +9,7 @@ class Production:
 class Development:
     SECRET_KEY = "dev"
     DATABASE = os.path.join(app.instance_path, 'dev.sqlite')
-app.config.from_object(Production())
+app.config.from_object(Development())
 
 try:
     os.makedirs(app.instance_path)
