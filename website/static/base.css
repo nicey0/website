@@ -1,12 +1,13 @@
 :root {
     --main: #1b1b1c;
-    --white: #d6d8d8;
+    --white: #666666;
+    --text: #dddddd;
 }
 
 * {
     margin: 0;
     padding: 0;
-    color: white;
+    color: var(--text);
     font-family: 'Fira Mono', monospace;
 }
 
