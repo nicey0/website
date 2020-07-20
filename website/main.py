@@ -48,5 +48,7 @@ def about():
 @bp.route('/contact')
 def contact():
     with open('website/data/contact.txt') as f:
-        contacts = f.read().strip().split('\n')
+        contacts = []
+        for c in f.read().strip().split('\n'):
+            contacts.append(c.split(': '))
     return render_template('main/contact.html', contacts=contacts)
