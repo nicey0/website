@@ -41,7 +41,9 @@ def about():
     abouts = []
     with open('website/data/about.txt') as f:
         for section in f.read().split("---"):
-            q, a = section.strip().split('\n')
+            qna = section.strip().split('\n')
+            q = qna[0]
+            a = qna[1:]
             abouts.append({"q": q, "a": a})
     return render_template('main/about.html', abouts=abouts)
 

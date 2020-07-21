@@ -6,7 +6,10 @@
     {% for about in abouts %}
         <section class="st">
             <h2>{{ about['q'] }}</h2>
-            <p>{{ about['a'] }}</p>
+            {% for line in about['a'] %}
+                <p>{{ line }}</p><br>
+            {% endfor %}
+            <br>
         </section>
     {% endfor %}
 {% endblock body %}

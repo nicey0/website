@@ -20,4 +20,4 @@ tui-tetris::tui-tetris
 tetris clone made in python+ncurses [unfinished]
 ---
 wireworld::wireworld
-wireworld implementation in made python+pillow
+wireworld implementation made in python+pillow
