@@ -11,6 +11,6 @@ Personal website (properly) made with Flask!
 - I might post there if I'm able to host it. What am I going to post? Well, refer to the answer to question 2, **"Why?"**
 
 ## TODO
-- [ ] link about page to some file to make it easier to edit
-- [ ] link contact page to some file to make it easier to edit
-- [ ] link projects page to some file to make it easier to edit
+- [X] link about page to some file to make it easier to edit
+- [X] link contact page to some file to make it easier to edit
+- [X] link projects page to some file to make it easier to edit
